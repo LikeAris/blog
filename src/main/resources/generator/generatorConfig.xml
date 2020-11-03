@@ -20,6 +20,7 @@
                         connectionURL="jdbc:mysql://127.0.0.1:3306/blog01?serverTimezone=GMT%2B8"
                         userId="root"
                         password="root">
+            <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
         <!-- 类型转换 -->
         <javaTypeResolver >
