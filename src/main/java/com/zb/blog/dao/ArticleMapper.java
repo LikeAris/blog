@@ -4,6 +4,7 @@ import com.zb.blog.pojo.Article;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
+
 @Mapper
 public interface ArticleMapper {
     /**
@@ -66,5 +67,4 @@ public interface ArticleMapper {
      * 查询所有文章
      */
     List<Article> getAllArticle(Integer userId);
-
 }
