@@ -52,4 +52,9 @@ public interface UserMapper {
      * @mbggenerated
      */
     int updateByPrimaryKey(User record);
+    /**
+     *通过部分用户信息查询该用户
+     */
+    User selectByUserMessage(User record);
+
 }

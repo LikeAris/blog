@@ -171,12 +171,35 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
 <!--  根据用户信息查询用户-->
-  <select id="login" parameterType="com.zb.blog.pojo.User" resultMap="BaseResultMap">
+  <select id="selectByUserMessage" parameterType="com.zb.blog.pojo.User" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     from user
     <where>
-
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="head != null">
+        head = #{head,jdbcType=VARCHAR},
+      </if>
+      <if test="autograph != null">
+        autograph = #{autograph,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="role != null">
+        role = #{role,jdbcType=TINYINT},
+      </if>
     </where>
   </select>
 </mapper>
