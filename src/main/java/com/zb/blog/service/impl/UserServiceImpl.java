@@ -4,6 +4,7 @@ import com.zb.blog.dao.UserMapper;
 import com.zb.blog.pojo.User;
 import com.zb.blog.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * DESC: UserServiceImpl
@@ -12,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @author 张彪
  * @version 1.0
  */
+@Service
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
@@ -21,7 +23,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public int Register(User record) {
+    public int register(User record) {
         return userMapper.insertSelective(record);
     }
 }

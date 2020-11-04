@@ -176,30 +176,32 @@
     <include refid="Base_Column_List" />
     from user
     <where>
+      <trim suffixOverrides="and">
       <if test="username != null">
-        username = #{username,jdbcType=VARCHAR},
+        username = #{username,jdbcType=VARCHAR} and
       </if>
       <if test="password != null">
-        password = #{password,jdbcType=VARCHAR},
+        password = #{password,jdbcType=VARCHAR} and
       </if>
       <if test="email != null">
-        email = #{email,jdbcType=VARCHAR},
+        email = #{email,jdbcType=VARCHAR} and
       </if>
       <if test="phone != null">
-        phone = #{phone,jdbcType=VARCHAR},
+        phone = #{phone,jdbcType=VARCHAR} and
       </if>
       <if test="head != null">
-        head = #{head,jdbcType=VARCHAR},
+        head = #{head,jdbcType=VARCHAR} and
       </if>
       <if test="autograph != null">
-        autograph = #{autograph,jdbcType=VARCHAR},
+        autograph = #{autograph,jdbcType=VARCHAR} and
       </if>
       <if test="status != null">
-        status = #{status,jdbcType=TINYINT},
+        status = #{status,jdbcType=TINYINT} and
       </if>
       <if test="role != null">
-        role = #{role,jdbcType=TINYINT},
+        role = #{role,jdbcType=TINYINT} and
       </if>
+      </trim>
     </where>
   </select>
 </mapper>

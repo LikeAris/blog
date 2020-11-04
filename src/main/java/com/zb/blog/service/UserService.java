@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
  * @author 张彪
  * @version 1.0
  */
-@Service
+
 public interface UserService {
     /**
      * 用户登录
@@ -19,5 +19,5 @@ public interface UserService {
     /**
      * 用户注册
      */
-    int Register(User record);
+    int register(User record);
 }
