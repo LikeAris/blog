@@ -1,6 +1,7 @@
 package com.zb.blog.controller;
 
 import com.zb.blog.service.ArticleService;
+import com.zb.blog.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,7 +23,7 @@ public class ArticleController {
      * 查询所有文章
      */
     @RequestMapping("/getAllArticle")
-    public void getAllArticle(Integer userId){
-        articleService.getAllArticle(userId);
+    public Result getAllArticle(Integer userId){
+        return Result.success(articleService.getAllArticle(userId));
     }
 }

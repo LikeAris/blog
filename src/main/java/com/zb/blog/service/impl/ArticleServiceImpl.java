@@ -22,7 +22,6 @@ public class ArticleServiceImpl implements ArticleService {
     private ArticleMapper articleMapper;
     @Override
     public List<Article> getAllArticle(Integer userId) {
-        System.out.println(articleMapper.getAllArticle(userId));
         return articleMapper.getAllArticle(userId);
     }
 }
